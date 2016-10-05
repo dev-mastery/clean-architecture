@@ -1,0 +1,15 @@
+.price {
+  font-size: 34px;
+  /*color: #654B21;*/
+}
+
+.link {
+  cursor: pointer;
+}
+.featureImage {
+  margin-top: 23px;
+}
+.thumb {
+  margin-top: 5px;
+  max-width: 100%;
+}

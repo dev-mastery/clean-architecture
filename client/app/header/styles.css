@@ -1,0 +1,30 @@
+.header {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #d9e7f4;
+  min-height: 45px;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 25px;
+  padding-left: 0;
+  color: #214565;
+}
+
+@media only screen and (max-width: 767px)  {
+  .header {
+    min-height: 80px;
+  }
+  .brand {
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+    border-bottom: solid 1px #d9e7f4;
+    /*padding-left: 12px;*/
+    text-align: center;
+    padding-bottom: 2px;
+    margin-bottom: 6px;
+  }
+}

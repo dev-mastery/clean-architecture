@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "NETStandard.Library": "1.6.0",
+    "CleanCo.Common": {
+      "target": "project"
+    },
+    "CleanCo.Products": {
+      "target": "project"
+    }
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  },
+
+  "tooling": {
+    "defaultNamespace": "CleanCo.Ecomm.Catalog"
+  }
+}

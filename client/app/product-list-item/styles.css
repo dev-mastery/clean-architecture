@@ -1,0 +1,14 @@
+.name {
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.price {
+  text-align: center;
+  font-size: 34px;
+  /*color: #654B21;*/
+}
+
+.link {
+  cursor: pointer;
+}

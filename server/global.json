@@ -1,0 +1,11 @@
+{
+    "projects": [
+        "CleanCo.JsonAdapter",
+        "CleanCo.Ecomm.RepoAdapters",
+        "CleanCo.Ecomm.RestAdapter",
+        "CleanCo.Common",
+        "CleanCo.Products",
+        "CleanCo.Tests",
+        "CleanCo.Ecomm.Catalog"
+    ]
+}

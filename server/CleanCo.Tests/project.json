@@ -1,0 +1,38 @@
+{
+    "version": "1.0.0-*",
+    "testRunner": "xunit",
+    "dependencies": {
+        "dotnet-test-xunit": "2.2.0-preview2-build1029",
+        "xunit": "2.2.0-beta2-build3300",
+        "CleanCo.Common": {
+            "target": "project"
+        },
+        "CleanCo.Products": {
+            "target": "project"
+        },
+        "CleanCo.Ecomm.RepoAdapter": {
+            "target": "project"
+        },
+        "CleanCo.Ecomm.Catalog": {
+            "target": "project"
+        }
+    },
+    "frameworks": {
+        "netcoreapp1.0": {
+            "dependencies": {
+                "Microsoft.NETCore.App": {
+                    "type": "platform",
+                    "version": "1.0.0"
+                }
+            }
+        }
+    },
+    "buildOptions": {
+        "copyToOutput": {
+            "include": [ "xunit.runner.json" ]
+        }
+    },
+    "tooling": {
+        "defaultNamespace": "Clean.Tests"
+    }
+}
