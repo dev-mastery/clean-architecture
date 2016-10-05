@@ -7,6 +7,8 @@ import { combineReducers } from 'redux-immutable';
 import { fromJS } from 'immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
 import cartReducer from 'cart-page/reducer';
+import productListReducer from 'product-list/reducer.js';
+import productPageReducer from 'product-page/reducer.js';
 
 /*
  * routeReducer
@@ -42,7 +44,9 @@ function routeReducer(state = routeInitialState, action) {
 export default function createReducer(asyncReducers) {
   return combineReducers({
     route: routeReducer,
+    productList: productListReducer,
     cart: cartReducer,
+    currentProduct: productPageReducer,
     ...asyncReducers,
   });
 }

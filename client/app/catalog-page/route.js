@@ -9,14 +9,13 @@ export default function createCatalogRoute(store) {
     name: 'catalog',
     getComponent(nextState, cb) {
       const importModules = Promise.all([
-        System.import('product-list/reducer.js'),
+        // System.import('product-list/reducer.js'),
         System.import('catalog-page'),
       ]);
 
       const renderRoute = loadModule(cb);
 
-      importModules.then(([reducer, component]) => {
-        injectReducer('productList', reducer.default);
+      importModules.then(([component]) => { 
         renderRoute(component);
       });
 

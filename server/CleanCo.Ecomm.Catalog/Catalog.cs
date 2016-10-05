@@ -52,7 +52,7 @@ namespace CleanCo.Ecomm
                                           "Agave Root & Yellow Dock Root.\n\n" +
                                           "A soap that's as tough as wood. Because you want to be a lumberjack and you're ok. " +
                                           "A 2013 contest winning soap from Greg in Seattle, Washington.";
-                repo.Save(lumberjack);
+                this.AddProduct(lumberjack);
 
                 Product matcha = new Product("Matcha Matcha Man");
                 matcha.Price = 6.95m;
@@ -63,7 +63,7 @@ namespace CleanCo.Ecomm
                 "Angelica in Los Angeles, CA knows what she like in a man -- a real man, a manly man, a man who likes healthy moisturized " +
                 "skin and a smooth firm bar of soap with lots of antioxidants. That's why her Matcha Matcha Man is one of our " +
                 "2016 soap contest winners!";
-                repo.Save(matcha);
+                this.AddProduct(matcha);
                 
                 Product boardwalk = new Product("Boardwalk Hempire");
                 boardwalk.Price = 6.95m;
@@ -73,7 +73,7 @@ namespace CleanCo.Ecomm
                 boardwalk.Description = "A wood patchouli blend with ruby red grapefruit, lemon & hemp oil\n\n" +
                 "Equally inspired by the lush green pacific slopes of Humbolt and the drum circles of Venice Beach, " +
                 "this soap has a grounded, earthy scent with fresh, crisp, light notes.";
-                repo.Save(boardwalk);
+                this.AddProduct(boardwalk);
             }
         }
     }

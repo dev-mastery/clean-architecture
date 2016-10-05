@@ -9,11 +9,13 @@ class CcProductListContainer extends Component {
   }
 
   componentDidUpdate(prevProps) {
+    console.log(prevProps);
     this.fetchData(prevProps.products);
   }
 
   fetchData(oldList) {
     const newList = this.props.products;
+    console.log(oldList, newList);
     const callBack = this.props.onProductsLoaded;
     if (
         !oldList ||

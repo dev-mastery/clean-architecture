@@ -9,14 +9,12 @@ export default function createCartRoute(store) {
     name: 'cart',
     getComponent(nextState, cb) {
       const importModules = Promise.all([
-        System.import('cart-page/reducer'),
         System.import('cart-page'),
       ]);
 
       const renderRoute = loadModule(cb);
 
-      importModules.then(([reducer, component]) => {
-        injectReducer('cart', reducer.default);
+      importModules.then(([component]) => {
         renderRoute(component);
       });
 
