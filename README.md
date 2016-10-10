@@ -27,4 +27,4 @@ Open a new command line window and go to /clean-architecture:
     cd client
     npm run start
     
-*IMPORTANT* Make sure the server code is running at localhost:5000
+**IMPORTANT:** Make sure the server code is running at localhost:5000
