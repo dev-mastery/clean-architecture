@@ -26,7 +26,7 @@ After setup, from the command line, at `/clean-architecture`:
     cd CleanCo.Ecomm.RestAdapter
     dotnet run
 
-Open a new command line window and go to `/clean-architecture`:
+Open a new terminal window and go to `/clean-architecture`:
 
     cd client
     npm run start
