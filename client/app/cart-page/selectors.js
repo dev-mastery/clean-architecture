@@ -1,3 +1,8 @@
+/*
+ * selectors let us take advantage of simple caching.
+ * More info: https://github.com/reactjs/reselect
+*/
+
 import { createSelector } from 'reselect';
 import { totalItemsInCart } from 'cart-page/use-cases';
 

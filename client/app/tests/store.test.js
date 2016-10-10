@@ -1,9 +1,15 @@
 /**
+ * DevMastery Note: This is mostly code from React-boilerplate.
+ * Not much was changed here. More info at:
+ * https://github.com/mxstbr/react-boilerplate
+**/
+
+/**
  * Test store addons
  */
 
 import expect from 'expect';
-import configureStore from '../store'; // eslint-disable-line
+import configureStore from '../store';
 import { browserHistory } from 'react-router';
 
 describe('configureStore', () => {

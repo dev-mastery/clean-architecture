@@ -6,7 +6,7 @@ import { createHomeRoute } from 'home-page';
 import { createCatalogRoute } from 'catalog-page';
 import { createCartRoute } from 'cart-page';
 import { createProductRoute } from 'product-page';
-import createNotFoundRoute from 'not-found/routes';
+import { createNotFoundRoute } from 'not-found';
 
 export default function createRoutes(store) {
   return [

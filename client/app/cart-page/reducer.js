@@ -1,3 +1,10 @@
+/**
+ * In Redux, the reducer is where we manage state for anything global.
+ * Here, we manage the state of the cart.
+ * Notice that all the business logic is actually coming from
+ * our use case module.
+**/
+
 import { fromJS } from 'immutable';
 import { ADD_TO_CART } from 'cart-page/action-types';
 import { addProductToCart, getCartProducts } from 'cart-page/use-cases';

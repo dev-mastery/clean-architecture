@@ -1,32 +1,13 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { browserHistory } from 'react-router';
-import { setImage } from 'product-page';
-import CcProductListItemTemplate from 'product-list-item/template';
+/**
+ * Generally an index.js file should simply provide an index of public methods
+ * and modules. This is a good way to signal to consumers of this feature code
+ * which elements are meant to be referenced and used and which ones are for
+ * internal use only. Of course, nothing stops code from reaching deeper into
+ * the hierarchy and referencing internal modules, but this way, those imports
+ * will stand out because they have to be more explicit and we can easily find
+ * and fix them later.
+ **/
 
-const CcProductListItem = connect(
-                            mapStateToProps,
-                            mapDispatchToProps
-                          )(CcProductListItemTemplate);
-
-CcProductListItem.propTypes = {
-  price: React.PropTypes.string.isRequired,
-  name: React.PropTypes.string.isRequired,
-};
-
-function mapStateToProps(_, ownProps) {
-  return ownProps;
-}
-
-function mapDispatchToProps(dispatch, ownProps) {
-  return {
-    onClickProduct: () => clickProduct(dispatch, ownProps),
-  };
-}
-
-function clickProduct(dispatch, ownProps) {
-  dispatch(setImage(ownProps.primaryImage));
-  browserHistory.push(`/product/${ownProps.id}`);
-}
+import CcProductListItem from 'product-list-item/container';
 
 export default CcProductListItem;

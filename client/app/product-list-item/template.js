@@ -1,3 +1,7 @@
+/**
+ * Templates should be stateless and "dumb". No logic here please.
+**/
+
 import React from 'react';
 import styles from 'product-list-item/styles.css';
 
@@ -8,6 +12,7 @@ CcProductListItemTemplate.propTypes = {
   addToCart: React.PropTypes.func,
   price: React.PropTypes.string,
   shortDescription: React.PropTypes.string,
+  onClickProduct: React.PropTypes.func,
 };
 
 function CcProductListItemTemplate({
@@ -21,10 +26,10 @@ function CcProductListItemTemplate({
   return (
     <div
       key={id}
-      className={`col col-xs-8 col-xs-offset-2 col-sm-offset-0 col-sm-4 ${styles.link}`}
+      className={` ${styles.link}`}
       onClick={onClickProduct}
     >
-      <img src={image} alt={name} className="img-responsive" />
+      <img src={image} alt={name} className="img-responsive center-block" />
       <h5 className={styles.name}>{name}</h5>
       <div className={`text-info ${styles.price}`}>{price}</div>
       <small>{shortDescription}</small>

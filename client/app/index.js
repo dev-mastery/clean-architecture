@@ -1,4 +1,10 @@
 /**
+ * DevMastery Note: This is mostly code from React-boilerplate.
+ * Not much was changed here. More info at:
+ * https://github.com/mxstbr/react-boilerplate
+**/
+
+/**
  *
  * App.react.js
  *

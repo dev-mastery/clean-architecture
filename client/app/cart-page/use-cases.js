@@ -1,3 +1,12 @@
+/**
+ * The use case encapsulates the business logic and should be
+ * free of dependencies. Along with the Entities, this is the
+ * heart and sould of our app.
+**/
+
+import { validateApi } from 'utils/use-case-helper';
+
+// one could argue that this belongs with product list
 function addProductToCart(api, id) {
   validateApi(api, 'addToCart');
   api.addToCart(id);
@@ -8,14 +17,11 @@ function getCartProducts(api) {
   return api.getCart();
 }
 
-function validateApi(api, method) {
-  if (!api || !api[method]) {
-    throw new Error('invalid api');
-  }
-}
-
 function totalItemsInCart(items) {
-  if (!!items) {
+  // const below avoids eslint warning:
+  // http://eslint.org/docs/rules/no-extra-boolean-cast
+  const itemsValid = !!items;
+  if (itemsValid) {
     return items.reduce(
       (prev, curr) => prev + curr.qty,
       0

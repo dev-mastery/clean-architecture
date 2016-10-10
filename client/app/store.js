@@ -1,4 +1,11 @@
 /**
+ * DevMastery Note: This is mostly code from React-boilerplate.
+ * Not much was changed here. More info at:
+ * https://github.com/mxstbr/react-boilerplate
+**/
+
+
+/**
  * Create the store with asynchronously loaded reducers
  */
 

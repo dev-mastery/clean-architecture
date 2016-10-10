@@ -2,7 +2,7 @@
   padding-top: 5px;
   padding-bottom: 5px;
   margin-bottom: 10px;
-  border-bottom: 1px solid #d9e7f4;
+  border-bottom: 1px solid #D9E7F4;
   min-height: 45px;
 }
 
@@ -13,16 +13,16 @@
   color: #214565;
 }
 
-@media only screen and (max-width: 767px)  {
+@media only screen and (max-width: 767px) {
   .header {
     min-height: 80px;
   }
+
   .brand {
     font-weight: bold;
     font-size: 20px;
     width: 100%;
-    border-bottom: solid 1px #d9e7f4;
-    /*padding-left: 12px;*/
+    border-bottom: solid 1px #D9E7F4;
     text-align: center;
     padding-bottom: 2px;
     margin-bottom: 6px;

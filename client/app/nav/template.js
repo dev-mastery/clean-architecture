@@ -1,3 +1,6 @@
+/**
+ * Templates should be stateless and "dumb". No logic here please.
+**/
 import React from 'react';
 import CcNavItem from 'nav-item';
 

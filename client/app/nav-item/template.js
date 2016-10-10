@@ -1,3 +1,6 @@
+/**
+ * Templates should be stateless and "dumb". No logic here please.
+**/
 import React from 'react';
 import { Link } from 'react-router';
 import styles from 'nav-item/styles.css';

@@ -1,3 +1,5 @@
+import { validateApi } from 'utils/use-case-helper';
+
 export {
   filterProductsById,
   formatProduct,
@@ -9,19 +11,22 @@ export {
 
 function formatProduct(product) {
   validateProduct(product);
-  const shortDescription = !!product.description ? // eslint-disable-line no-extra-boolean-cast
-                            `${product.description.split(' ')
-                                                  .slice(0, 10)
-                                                  .join(' ')}
-                                                  ...` :
-                              null;
-  const price = product.price.toLocaleString(
-                                  'en-US',
-                                  { style: 'currency', currency: 'USD' }
-                                );
+  // isValidDescription keeps eslint calm and happy.
+  // http://eslint.org/docs/rules/no-extra-boolean-cast
+  const isValidDescription = !!product.description;
+  const description = isValidDescription && product.description;
+  const shortDescription = isValidDescription ?
+                           description.split(' ') // eslint-disable-line prefer-template
+                                      .slice(0, 10)
+                                      .join(' ') +
+                                      ' ...' : null;
+  const price = product.price.toLocaleString('en-US',
+                                            { style: 'currency', currency: 'USD' });
+
   const images = product.additionalImages ?
-                 product.additionalImages.concat([product.primaryImage]) :
-                 [].concat([product.primaryImage]);
+                  product.additionalImages.concat([product.primaryImage]) :
+                  [].concat([product.primaryImage]);
+
   return { ...product, shortDescription, price, images };
 }
 
@@ -57,17 +62,11 @@ function sameProducts(oldList, newList) {
     return false;
   }
 
-  newList.forEach((product, index) => {
+  oldList.forEach((product, index) => {
     areEqual = (product.id === newList[index].id);
   });
 
   return areEqual;
-}
-
-function validateApi(api, method) {
-  if (!api || !api[method]) {
-    throw new Error('invalid api');
-  }
 }
 
 function validateProduct(product) {

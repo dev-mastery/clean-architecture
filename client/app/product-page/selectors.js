@@ -1,8 +1,10 @@
+/*
+ * selectors let us take advantage of simple caching ('memoization').
+ * More info: https://github.com/reactjs/reselect
+*/
 import { createSelector } from 'reselect';
-import * as api from 'api';
 import {
   selectProducts,
-  getProductById,
   filterProductsById,
   formatProduct,
   }

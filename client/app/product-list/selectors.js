@@ -1,8 +1,13 @@
+/*
+ * selectors let us take advantage of simple caching ('memoization').
+ * More info: https://github.com/reactjs/reselect
+*/
+
 import { createSelector } from 'reselect';
 import { formatProductList } from 'product-list/use-cases';
 import CcSpinner from 'spinner';
 
-export { selectProductListProps, selectRowClass, selectProducts };
+export { selectProductListProps, selectProducts };
 
 function selectProductListProps() {
   return createSelector(
@@ -12,13 +17,6 @@ function selectProductListProps() {
       spinner,
       products: formatProductList(products),
     })
-  );
-}
-
-function selectRowClass() {
-  return createSelector(
-    (idx) => idx,
-    (index) => ((index !== 0 && (index) % 3 === 0) ? 'row' : ''),
   );
 }
 
