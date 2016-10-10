@@ -5,6 +5,7 @@ Many of these concepts are explained by Robert C. Martin (aka "Uncle Bob") in Th
 *This project is in no way endrosed by, or affiliated with, Robert C. Martin
 
 ##Prerequisites
+* git - https://git-scm.com
 * .Net Core - https://www.microsoft.com/net/core 
 * Node JS + NPM - https://nodejs.org/ 
 
