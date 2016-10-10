@@ -20,15 +20,15 @@ From the command line:
     npm install
     
 ##Run
-After setup, from the command line, at /clean-architecture:
+After setup, from the command line, at `/clean-architecture`:
 
     cd server
     cd CleanCo.Ecomm.RepoAdapter
     dotnet run
 
-Open a new command line window and go to /clean-architecture:
+Open a new command line window and go to `/clean-architecture`:
 
     cd client
     npm run start
     
-**IMPORTANT:** Make sure the server code is running at localhost:5000
+**IMPORTANT:** Make sure the server code is running at `localhost:5000`
