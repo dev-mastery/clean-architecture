@@ -10,6 +10,7 @@ Many of these concepts are explained by Robert C. Martin (aka "Uncle Bob") in Th
 
 ##Setup
 From the command line:
+
     git clone https://github.com/dev-mastery/clean-architecture.git
     cd clean-architecture
     cd server 
@@ -19,11 +20,13 @@ From the command line:
     
 ##Run
 After setup, from the command line, at /clean-architecture:
+
     cd server
     cd CleanCo.Ecomm.RepoAdapter
     dotnet run
 
 Open a new command line window and go to /clean-architecture:
+
     cd client
     npm run start
     
