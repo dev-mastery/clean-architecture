@@ -23,7 +23,7 @@ From the command line:
 After setup, from the command line, at `/clean-architecture`:
 
     cd server
-    cd CleanCo.Ecomm.RepoAdapter
+    cd CleanCo.Ecomm.RestAdapter
     dotnet run
 
 Open a new command line window and go to `/clean-architecture`:
